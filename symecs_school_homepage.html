@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SYMECS School, Dholnabad, Mirpurkhas — learning, creativity and a brighter future." />
+  <title>SYMECS School | Learn, Grow, Shine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#172554;--blue:#2563eb;--sky:#38bdf8;--orange:#fb923c;--yellow:#facc15;--green:#22c55e;--pink:#f472b6;--ink:#243047;--muted:#64748b;--paper:#fffdf8}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Poppins',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1160px,92%);margin:auto}
+    .topbar{background:var(--navy);color:#eaf2ff;font-size:13px;padding:9px 0}
+    .topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:20;background:#ffffffed;backdrop-filter:blur(12px);box-shadow:0 5px 25px #17255412}
+    nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;color:var(--navy);font-size:20px;letter-spacing:-.5px}
+    .logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--blue),#7c3aed);display:grid;place-items:center;color:white;font-size:23px;box-shadow:0 7px 16px #2563eb40}
+    .brand small{display:block;font-size:10px;letter-spacing:2px;color:var(--muted);font-weight:600;margin-top:-4px}
+    .navlinks{display:flex;align-items:center;gap:27px;font-size:13px;font-weight:600;color:#475569}
+    .navlinks a:hover{color:var(--blue)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:13px 23px;font:700 13px 'Poppins',sans-serif;cursor:pointer;transition:.2s;gap:8px}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.04)}
+    .btn-primary{background:linear-gradient(100deg,var(--orange),#f97316);color:white;box-shadow:0 8px 20px #f9731638}
+    .btn-blue{background:var(--blue);color:white;box-shadow:0 8px 20px #2563eb35}
+    .hero{position:relative;overflow:hidden;padding:76px 0 85px;background:linear-gradient(120deg,#eff6ff 0%,#fff7ed 55%,#fdf2f8 100%)}
+    .hero:before,.hero:after{content:'';position:absolute;border-radius:50%;pointer-events:none}
+    .hero:before{width:360px;height:360px;background:#bfdbfe66;right:-100px;top:-130px}
+    .hero:after{width:230px;height:230px;background:#fed7aa77;left:-100px;bottom:-130px}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:50px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:white;border:1px solid #dbeafe;color:var(--blue);border-radius:999px;padding:7px 14px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+    h1{font-family:'Baloo 2',cursive;color:var(--navy);font-size:clamp(45px,6vw,72px);line-height:1.02;margin:20px 0 17px;letter-spacing:-1.8px}
+    h1 span{color:var(--blue);position:relative}
+    .hero-copy{max-width:540px;color:#64748b;font-size:15px;margin-bottom:27px}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap}
+    .mini-note{display:flex;align-items:center;gap:10px;margin-top:25px;color:#64748b;font-size:12px;font-weight:500}
+    .mini-note strong{color:var(--navy)}
+    .hero-art{position:relative;min-height:390px;display:grid;place-items:center}
+    .art-card{width:min(420px,100%);height:340px;border-radius:34px;background:linear-gradient(145deg,#60a5fa,#7c3aed);position:relative;overflow:hidden;box-shadow:0 24px 55px #1d4ed833;display:grid;place-items:center}
+    .art-card:before{content:'';position:absolute;width:280px;height:280px;border-radius:50%;background:#ffffff20;top:-100px;right:-50px}
+    .art-card:after{content:'';position:absolute;width:220px;height:220px;border-radius:50%;background:#facc1533;bottom:-120px;left:-40px}
+    .school-emoji{font-size:150px;filter:drop-shadow(0 15px 10px #17255430);z-index:1}
+    .float-tag{position:absolute;background:white;border-radius:18px;padding:12px 16px;box-shadow:0 12px 28px #17255420;font-size:12px;font-weight:700;color:var(--navy);z-index:2}
+    .tag-one{top:25px;left:-12px}.tag-two{bottom:28px;right:-13px}.tag-three{bottom:0;left:20px;background:#fef3c7}
+    .section{padding:82px 0}
+    .section-head{text-align:center;max-width:650px;margin:0 auto 42px}
+    .kicker{color:#f97316;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+    h2{font-family:'Baloo 2',cursive;color:var(--navy);font-size:clamp(34px,4vw,47px);line-height:1.1;margin:8px 0 12px}
+    .section-head p{color:var(--muted);font-size:14px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+    .about-visual{min-height:330px;border-radius:30px;background:linear-gradient(140deg,#dcfce7,#dbeafe);display:grid;place-items:center;position:relative;overflow:hidden}
+    .about-visual .big-emoji{font-size:135px;filter:drop-shadow(0 15px 12px #17255420)}
+    .about-sticker{position:absolute;right:20px;bottom:20px;background:white;border-radius:17px;padding:12px 17px;font-size:12px;font-weight:700;color:var(--navy);box-shadow:0 10px 25px #17255414}
+    .about-copy h2{font-size:42px}.about-copy p{color:var(--muted);font-size:14px;margin:13px 0}
+    .check-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 27px}
+    .check-list li{font-size:12px;font-weight:600;color:#334155}.check-list li:before{content:'✓';display:inline-grid;place-items:center;width:21px;height:21px;border-radius:50%;background:#dcfce7;color:#16a34a;margin-right:8px}
+    .features{background:#f8fafc}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .feature{background:white;border:1px solid #edf2f7;border-radius:23px;padding:27px 24px;transition:.2s}
+    .feature:hover{transform:translateY(-5px);box-shadow:0 18px 35px #1725540d}
+    .feature-icon{width:54px;height:54px;border-radius:17px;display:grid;place-items:center;font-size:26px;margin-bottom:18px}
+    .feature:nth-child(1) .feature-icon{background:#dbeafe}.feature:nth-child(2) .feature-icon{background:#ffedd5}.feature:nth-child(3) .feature-icon{background:#dcfce7}.feature:nth-child(4) .feature-icon{background:#fce7f3}.feature:nth-child(5) .feature-icon{background:#fef9c3}.feature:nth-child(6) .feature-icon{background:#ede9fe}
+    .feature h3{color:var(--navy);font-size:16px;margin-bottom:7px}.feature p{font-size:12px;color:var(--muted)}
+    .admission-band{padding:0 0 82px}
+    .band-inner{border-radius:30px;padding:42px 48px;background:linear-gradient(110deg,#1d4ed8,#6d28d9);color:white;display:flex;align-items:center;justify-content:space-between;gap:25px;position:relative;overflow:hidden}
+    .band-inner:after{content:'✦';position:absolute;font-size:170px;color:#ffffff12;right:28%;top:-75px}
+    .band-inner h2{color:white;font-size:36px;margin:0 0 5px}.band-inner p{color:#dbeafe;font-size:13px}.band-inner .btn{background:var(--yellow);color:var(--navy);white-space:nowrap;z-index:1}
+    .register{background:linear-gradient(130deg,#fff7ed,#eff6ff)}
+    .register-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:start}
+    .register-copy h2{font-size:43px}.register-copy p{font-size:14px;color:var(--muted);margin:12px 0 22px}
+    .contact-line{display:flex;align-items:center;gap:12px;margin:13px 0;font-size:13px;font-weight:600;color:#334155}.contact-line span{width:37px;height:37px;border-radius:12px;background:white;display:grid;place-items:center}
+    form{background:white;padding:30px;border-radius:26px;box-shadow:0 18px 45px #1e3a8a12;border:1px solid #e8eef8}
+    .form-title{font-family:'Baloo 2',cursive;font-size:26px;color:var(--navy);margin-bottom:4px}.form-sub{font-size:12px;color:var(--muted);margin-bottom:20px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    .field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}
+    label{font-size:11px;font-weight:700;color:#475569}
+    input,select,textarea{width:100%;border:1px solid #dbe3ef;border-radius:11px;padding:12px 13px;font:12px 'Poppins',sans-serif;color:var(--ink);background:#fbfdff;outline:none;transition:.2s}
+    input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #2563eb15}
+    textarea{resize:vertical;min-height:82px}
+    form button{width:100%;margin-top:18px}
+    #formMessage{display:none;margin-top:13px;padding:12px;border-radius:11px;background:#dcfce7;color:#166534;font-size:12px;font-weight:600}
+    footer{background:#111c3b;color:#dbeafe;padding:45px 0 20px}
+    .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:35px;padding-bottom:30px}
+    footer .brand{color:white;margin-bottom:14px}footer .brand small{color:#94a3b8}footer p,footer a{font-size:12px;color:#aebdd7}footer h4{font-size:13px;color:white;margin-bottom:13px}footer a{display:block;margin:8px 0}footer a:hover{color:#facc15}
+    .copyright{border-top:1px solid #ffffff1c;padding-top:17px;text-align:center;color:#94a3b8;font-size:10px}
+    @media(max-width:850px){.navlinks{gap:14px}.hero-grid,.about-grid,.register-grid{grid-template-columns:1fr}.hero-grid{gap:20px}.hero-art{min-height:350px}.about-visual{order:2}.feature-grid{grid-template-columns:repeat(2,1fr)}.register-copy{max-width:600px}.band-inner{padding:35px;}}
+    @media(max-width:600px){.topbar .container{justify-content:center;text-align:center}.topbar .container span:last-child{display:none}nav{min-height:68px}.brand{font-size:17px}.logo{width:42px;height:42px}.navlinks{display:none}.hero{padding:55px 0 65px}.hero-art{min-height:300px}.art-card{height:270px}.school-emoji{font-size:120px}.tag-one{left:0}.tag-two{right:0}.section{padding:62px 0}.feature-grid{grid-template-columns:1fr}.check-list{grid-template-columns:1fr}.band-inner{display:block;padding:30px 25px}.band-inner h2{font-size:30px}.band-inner .btn{margin-top:20px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}form{padding:22px}.footer-grid{grid-template-columns:1fr;gap:22px}.about-copy h2,.register-copy h2{font-size:36px}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>📍 Dholnabad, Mirpurkhas, Sindh</span><span>✨ Building bright futures through quality education</span></div></div>
+  <header>
+    <nav class="container">
+      <a class="brand" href="#home"><span class="logo">🎓</span><span>SYMECS SCHOOL<small>LEARN • GROW • SHINE</small></span></a>
+      <div class="navlinks"><a href="#home">Home</a><a href="#about">About Us</a><a href="#features">Why SYMECS</a><a href="#admission">Admissions</a><a href="#contact">Contact</a></div>
+      <a class="btn btn-primary" href="#register">Register Now ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home"><div class="container hero-grid">
+      <div>
+        <span class="eyebrow">🌟 Welcome to SYMECS School</span>
+        <h1>Where Young Minds <span>Shine</span> Bright!</h1>
+        <p class="hero-copy">A place to discover talents, build confidence and create a strong foundation for tomorrow. Join the SYMECS family and take the first step towards a brighter future.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#register">Start Your Registration →</a><a class="btn btn-blue" href="#about">Explore Our School</a></div>
+        <div class="mini-note"><span>📍</span><span><strong>Dholnabad, Mirpurkhas</strong><br>Learning today, leading tomorrow.</span></div>
+      </div>
+      <div class="hero-art"><div class="art-card"><span class="school-emoji">🏫</span></div><div class="float-tag tag-one">📚 Learn with curiosity</div><div class="float-tag tag-two">🚀 Dream big!</div><div class="float-tag tag-three">💡 Every child matters</div></div>
+    </div></section>
+
+    <section class="section" id="about"><div class="container about-grid">
+      <div class="about-visual"><span class="big-emoji">🧑‍🎓📖</span><div class="about-sticker">🌈 A brighter tomorrow starts here</div></div>
+      <div class="about-copy"><span class="kicker">A little about us</span><h2>Education That Inspires Every Child</h2><p>At <strong>SYMECS School</strong>, we believe education is more than books and classrooms. It is about nurturing curiosity, encouraging creativity and helping every student become confident and responsible.</p><p>Our goal is to create a welcoming learning environment where students are encouraged to ask questions, explore ideas and grow every day.</p>
+        <ul class="check-list"><li>Student-focused learning</li><li>Positive environment</li><li>Creative activities</li><li>Strong foundations</li></ul>
+        <a class="btn btn-blue" href="#register">Become a SYMECS Student →</a>
+      </div>
+    </div></section>
+
+    <section class="section features" id="features"><div class="container"><div class="section-head"><span class="kicker">Why choose us?</span><h2>Learning Made Meaningful</h2><p>We aim to support students academically, socially and creatively through a balanced school experience.</p></div>
+      <div class="feature-grid">
+        <article class="feature"><div class="feature-icon">📘</div><h3>Quality Education</h3><p>Build essential knowledge and skills with clear, engaging learning experiences.</p></article>
+        <article class="feature"><div class="feature-icon">🧠</div><h3>Creative Thinking</h3><p>Encouraging curiosity, problem-solving and the confidence to explore new ideas.</p></article>
+        <article class="feature"><div class="feature-icon">💻</div><h3>Digital Learning</h3><p>Introduce students to technology and the digital skills shaping our world.</p></article>
+        <article class="feature"><div class="feature-icon">🤝</div><h3>Character Building</h3><p>Promote respect, teamwork, responsibility and kindness in everyday school life.</p></article>
+        <article class="feature"><div class="feature-icon">🎨</div><h3>Beyond the Classroom</h3><p>Make room for creativity, activities, discovery and individual talents.</p></article>
+        <article class="feature"><div class="feature-icon">🌱</div><h3>Personal Growth</h3><p>Help every learner develop confidence and prepare for future opportunities.</p></article>
+      </div>
+    </div></section>
+
+    <section class="admission-band" id="admission"><div class="container"><div class="band-inner"><div><h2>Your Child's Bright Future Starts Here!</h2><p>Take the first step. Submit the registration form and our school team can guide you through the admission process.</p></div><a class="btn" href="#register">Register for Admission ✨</a></div></div></section>
+
+    <section class="section register" id="register"><div class="container register-grid">
+      <div class="register-copy"><span class="kicker">Admissions are Open</span><h2>Register Your Child Today</h2><p>Interested in joining SYMECS School? Fill in the form with the student's details. Our team will contact you about the next steps.</p>
+        <div class="contact-line"><span>📍</span><div><strong>Visit Us</strong><br>Dholnabad, Mirpurkhas, Sindh</div></div>
+        <div class="contact-line"><span>📝</span><div><strong>Simple Registration</strong><br>Share your details through the form</div></div>
+        <div class="contact-line"><span>🤗</span><div><strong>We're Here to Help</strong><br>Ask us about classes and admissions</div></div>
+      </div>
+      <form id="registrationForm">
+        <div class="form-title">Student Registration Form ✏️</div><p class="form-sub">Please enter the correct information in all required fields.</p>
+        <div class="form-grid">
+          <div class="field"><label for="student">Student's Full Name *</label><input id="student" name="student" required placeholder="Enter student's name"></div>
+          <div class="field"><label for="guardian">Parent / Guardian Name *</label><input id="guardian" name="guardian" required placeholder="Enter parent/guardian name"></div>
+          <div class="field"><label for="phone">Contact Number *</label><input id="phone" name="phone" type="tel" required placeholder="03XX XXXXXXX" pattern="[0-9+() -]{7,18}"></div>
+          <div class="field"><label for="class">Applying for Class *</label><select id="class" name="class" required><option value="">Select class</option><option>Playgroup</option><option>Nursery</option><option>KG</option><option>Class 1</option><option>Class 2</option><option>Class 3</option><option>Class 4</option><option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option></select></div>
+          <div class="field"><label for="dob">Date of Birth</label><input id="dob" name="dob" type="date"></div>
+          <div class="field"><label for="email">Email Address</label><input id="email" name="email" type="email" placeholder="example@email.com"></div>
+          <div class="field full"><label for="message">Message (Optional)</label><textarea id="message" name="message" placeholder="Any question or additional information..."></textarea></div>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit Registration →</button>
+        <div id="formMessage" role="status">Thank you! Your details have been entered. Please contact the school to complete your admission. (This demo form does not send or save data.)</div>
+      </form>
+    </div></section>
+  </main>
+
+  <footer id="contact"><div class="container"><div class="footer-grid">
+    <div><a class="brand" href="#home"><span class="logo">🎓</span><span>SYMECS SCHOOL<small>LEARN • GROW • SHINE</small></span></a><p>Inspiring young minds through learning, creativity and character. Let's build a brighter future together.</p></div>
+    <div><h4>Quick Links</h4><a href="#about">About Us</a><a href="#features">Why SYMECS</a><a href="#admission">Admissions</a><a href="#register">Student Registration</a></div>
+    <div><h4>Find Our School</h4><p>📍 Dholnabad, Mirpurkhas, Sindh, Pakistan</p><a href="#register">Have an admission question? Register here →</a></div>
+  </div><div class="copyright">© 2026 SYMECS School. All rights reserved.</div></div></footer>
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      if (!this.reportValidity()) return;
+      document.getElementById('formMessage').style.display = 'block';
+      this.reset();
+    });
+  </script>
+</body>
+</html>
